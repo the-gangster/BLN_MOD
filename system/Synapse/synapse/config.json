@@ -7,13 +7,15 @@
     { STitleBar:{
 		title:{
 			en:"Backlight Notification Settings",
-			de:"Backlight Notification Einstellungen"
+			de:"Backlight Notification Einstellungen",
+			pt:"Configurações do Backlight Notification"
 		}
 	}},
 	{ SCheckBox:{
 		description:{
 			en:"BLN will get the ‘menu’ and ‘back’ buttons to light up when you receive a new text, email, or missed call, which means you won’t need to unlock the screen to discover a notification.",
-			de:"BLN wird die ‘menu’ und ‘back’ Buttons leuchten lassen, wenn eine neue Nachricht oder entgangener Anruf vorliegt, was bedeutet, dass man den Screen nicht extra einschalten muss."
+			de:"BLN wird die ‘menu’ und ‘back’ Buttons leuchten lassen, wenn eine neue Nachricht oder entgangener Anruf vorliegt, was bedeutet, dass man den Screen nicht extra einschalten muss.",
+			pt:"BLN vai iluminar os botões de ‘menu’ e ‘voltar’ quando você receber uma nova mensagem, e-mail ou ligação perdida, o que significa que você saberá quando tem notificações pendentes sem precisar ligar a tela."
 		},
                 label:"BLN",
                 default:0,
@@ -23,26 +25,28 @@
         { SSeekBar:{
 		title:{
 			en:"Notification Timeout",
-			de:"Benachrichtigungsauszeit"
+			de:"Benachrichtigungsauszeit",
+			pt:"Tempo limite da luz de notificação"
 		},
 		default:0,
 		action:"generic /sys/class/misc/notification/notification_timeout",
 		values:{
 			0:"∞",
-			60000:{en:"1 minute",de:"1 Minute"},
-			180000:{en:"3 minutes",de:"3 Minuten"},
-			300000:{en:"5 minutes",de:"5 Minuten"},
-			600000:{en:"10 minutes",de:"10 Minuten"},
-			1200000:{en:"20 minutes",de:"20 Minuten"},
-			1800000:{en:"30 minutes",de:"30 Minuten"},
-			3600000:{en:"1 hour",de:"1 Stunde"},
-			7200000:{en:"2 hours",de:"2 Stunden"},
+			60000:{en:"1 minute",de:"1 Minute",pt:"1 minuto"},
+			180000:{en:"3 minutes",de:"3 Minuten",pt:"3 minutos"},
+			300000:{en:"5 minutes",de:"5 Minuten",pt:"5 minutos"},
+			600000:{en:"10 minutes",de:"10 Minuten",pt:"10 minutos"},
+			1200000:{en:"20 minutes",de:"20 Minuten",pt:"20 minutos"},
+			1800000:{en:"30 minutes",de:"30 Minuten",pt:"30 minutos"},
+			3600000:{en:"1 hour",de:"1 Stunde",pt:"1 hora"},
+			7200000:{en:"2 hours",de:"2 Stunden",pt:"2 horas"},
 		}
 	}},
 	{ SOptionList:{
 		title:{
 			en:"BLN Effect",
-			de:"BLN Effekt"
+			de:"BLN Effekt",
+			pt:"Efeito do BLN"
 		},
 		default:Steady,
                 action:"option blneffect",
@@ -54,19 +58,20 @@
                 ]
         }},
     { SPane:{
-		title:{en:"Touchkey LEDs Settings",de:"Sensortasten LED Einstellungen"},
+		title:{en:"Touchkey LEDs Settings",de:"Sensortasten LED Einstellungen",pt:"Configurações dos LEDs de toque"},
 	}},
         { SSeekBar:{
 		title:{
 			en:"Touchkey LEDs Timeout",
-			de:"Sensortasten LED Auszeit"
+			de:"Sensortasten LED Auszeit",
+			pt:"Tempo limite dos LEDs de toque"
 		},
 		default:0,
 		action:"generic /sys/class/misc/notification/bl_timeout",
 		values:{
 			0:"∞",
-			3000:{en:"3 seconds",de:"3 Sekunden"},
-			5000:{en:"5 seconds",de:"5 Sekunden"},
+			3000:{en:"3 seconds",de:"3 Sekunden",pt:"3 segundos"},
+			5000:{en:"5 seconds",de:"5 Sekunden",pt:"5 segundos"},
 		}
 	}},
     ]
