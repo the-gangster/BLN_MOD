@@ -19,7 +19,7 @@
 			de:"BLN wird die ‘Menu’ und ‘Back’ Buttons leuchten lassen, wenn eine neue Nachricht oder entgangener Anruf vorliegt, was bedeutet, dass man den Screen nicht extra einschalten muss.",
 			fr:"BLN allumera les boutons ‘menu’ et ‘retour’ quand vous recevrez un nouveau SMS, e-mail ou pour un appel manqué, sans avoir besoin d'allumer l'écran pour voir les notifications.",
 			pt:"BLN vai iluminar os botões de ‘menu’ e ‘voltar’ quando você receber uma nova mensagem, e-mail ou ligação perdida, o que significa que você saberá quando tem notificações pendentes sem precisar ligar a tela.",
-			ru:"Этот параметр включает подсветку кнопок ‘Меню’ и ‘Назад’, когда вы получаете новое сообщение, E-mail или пропущенный вызов.",
+			ru:"Этот параметр включает подсветку кнопок ‘Меню’ и ‘Назад’, когда вы получаете новое SMS-сообщение, E-mail или пропущенный вызов.",
 			tr:"BLN size bir bildirimi keşfetmek için ekranı açmak zorunda kalmadan, yeni bir sms, e-posta veya bir cevapsız çağrı aldığınızda 'menü' ve 'geri' düğmelerini aydınlatacaktır."
 		},
                 label:"BLN",
@@ -61,11 +61,11 @@
 		default:Steady,
                 action:"option blneffect",
                 values:{
-			Steady:{en:"Steady",de:"Statisch",pt:"Fixa",ru:"Стабильно",tr:"Sabit"},
-			Dimmed:{en:"Dimmed",de:"Gedimmt",pt:"Escurecida",ru:"Тускло",tr:"Soluk"},
-			Blinking:{en:"Blinking",de:"Blinken",pt:"Piscando",ru:"Мигание",tr:"Yanıp sönen"},
-			Breathing:{en:"Breathing",de:"Pulsieren",pt:"Pulsando",ru:"Пульсация",tr:"Nefes"},
-			Orgasm:{en:"Orgasm",de:"Orgasmus",pt:"Orgasmo",ru:"оргазм",tr:"Orgazm"},
+			Steady:{en:"Steady",de:"Statisch",fr:"Fixe",pt:"Fixa",ru:"Стабильно",tr:"Sabit"},
+			Dimmed:{en:"Dimmed",de:"Gedimmt",fr:"Grisé",pt:"Escurecida",ru:"Тускло",tr:"Soluk"},
+			Blinking:{en:"Blinking",de:"Blinken",fr:"Clignotant",pt:"Piscando",ru:"Мигание",tr:"Yanıp sönen"},
+			Breathing:{en:"Breathing",de:"Pulsieren",fr:"Clign. rapide",pt:"Pulsando",ru:"Пульсация",tr:"Nefes"},
+			Orgasm:{en:"Orgasm",de:"Orgasmus",fr:"Orgasme",pt:"Orgasmo",ru:"Вспышка",tr:"Orgazm"},
                 },
 		notify:[
 			{
@@ -91,11 +91,19 @@
 	{ SSeekBar:{
 		title:{
 			en:"Dimmed/Starting Voltage for breathing/blinking",
-			de:"Gedimmt-/Anfangs-Spannung für Blinken/Pulsieren"
+			de:"Gedimmt-/Anfangs-Spannung für Blinken/Pulsieren",
+			fr:"Grisé/Voltage de départ pour clignotement",
+			pt:"Voltagem inicial para os efeitos pulsando/piscando",
+			ru:"Стартовое напряжение для эффектов: ''Тускло'', ''Пульсация'', ''Мигание''. ",
+			tr:"''Soluk'', ''Nefes'' ve ''Yanıp sönen'' efektleri için başlangıç voltajı"
 		},
 		description:{
 			en:"Set the starting voltage level. (ignored by other modes)",
-			de:"Setzt die Anfangsspannung (von anderen Modi ignoriert)"
+			de:"Setzt die Anfangsspannung (von anderen Modi ignoriert)",
+			fr:"Définir le voltage de départ (ignoré par les autres modes",
+			pt:"Define o nível da voltagem de início. (ignorados por outros efeitos)",
+			ru:"Установка начального уровня напряжения. (игнорируются другие эффекты)",
+			tr:"Başlangıç voltajı seviyesini ayarlayın. (diğer efektlerde göz ardı edilir)"
 		},
 		unit:" V",
 		step:50,
@@ -114,11 +122,19 @@
 	{ SSeekBar:{
 		title:{
 			en:"Ending voltage for breathing/blinking",
-			de:"Ende-Spannung für Blinken/Pulsieren"
+			de:"Ende-Spannung für Blinken/Pulsieren",
+			fr:"Voltage de fin pour le clignotement",
+			pt:"Voltagem final para os efeitos pulsando/piscando",
+			ru:"Конечное напряжение для эффектов: ''Пульсация'', ''Мигание''. ",
+			tr:"''Nefes'' ve ''Yanıp sönen'' efektleri için bitiş voltajı"
 		},
 		description:{
 			en:"Set the ending voltage level. (ignored by other modes)",
-			de:"Setzt die Ende-Spannung (von anderen Modi ignoriert)"
+			de:"Setzt die Ende-Spannung (von anderen Modi ignoriert)",
+			fr:"Définir le voltage de fin (ignoré par les autres modes)",
+			pt:"Define o nível da voltagem final. (ignorados por outros efeitos)",
+			ru:"Установка конечного уровня напряжения. (игнорируются другие эффекты)",
+			tr:"Bitiş voltajı seviyesini ayarlayın. (diğer efektlerde göz ardı edilir)"
 		},
 		unit:" V",
 		step:50,
@@ -131,14 +147,18 @@
 		title:{
 			en:"Effect-Speed",
 			de:"Effekt-Geschwindigkeit",
-			fr:"Vitesse Effet",
-			pt:"velocidade efeito",
-			ru:"Влияние скорости",
-			tr:"etkisi Hız"
+			fr:"Vitesse de l'effet",
+			pt:"Velocidade do efeito",
+			ru:"Скорость эффекта",
+			tr:"Efekt Hızı"
 		},
 		description:{
 			en:"Sets the speed for breathing or blinking steps",
-			de:"Geschwindigkeit der Spannungswechsel (nur Blinking/Breathing)"
+			de:"Geschwindigkeit der Spannungswechsel (nur Blinking/Breathing)",
+			fr:"Définir la vitesse de clignotement",
+			pt:"Define a velocidade para os efeitos pulsando/piscando",
+			ru:"Установка порога скорости для эффектов: ''Пульсация'', ''Мигание''. ",
+			tr:"''Nefes'' ve ''Yanıp sönen'' efektleri için efekt hızını ayarlayın"
 		},
 		unit:" ms",
 		values:[
@@ -168,7 +188,11 @@
 		},
 		description:{
 			en:"voltage steppings monitor",
-			de:"Konfigurations-Monitor"
+			fr:"Moniteur d'espacement pour voltage",
+			de:"Konfigurations-Monitor",
+			pt:"Monitor das voltagens",
+			ru:"Монитор степпингов напряжения: ",
+			tr:"Voltaj kademeleri monitörü"
 		},
 		refresh:250,
 		action:"echo $(echo $(cat /sys/class/misc/notification/breathing_steps | tr \\n \" \") | { read C0 C1 C2 C3 C4 C5 C6 C7; echo ${C0%} ${C1%} ${C2%} ${C3%} @n${C4%} ${C5%} ${C6%} ${C7%} @n;})"
@@ -177,10 +201,10 @@
 		label:{
 			en:"TEST NOW",
 			de:"JETZT TESTEN",
-			fr:"essai",
-			pt:"ensaio",
-			ru:"тестировать",
-			tr:"test"
+			fr:"Tester",
+			pt:"TESTAR AGORA",
+			ru:"Проверка",
+			tr:"TEST ET"
 		},
 		action:"option toggleLEDs"
 	}},	
@@ -203,7 +227,14 @@
 			ru:"Тайм-аут индикаторов сенсорных кнопок",
 			tr:"Dokunmatik LED'lerin Zaman Aşımı"
 		},
-		description:" 0 = ∞ ",
+		description:{
+                       en:" 0 = ∞ ",
+                       de:" 0 = ∞ ",
+                       fr:" 0 = ∞ ",
+                       pt:" 0 = ∞ ",
+                       ru:" 0 = Не ограничено ",
+                       tr:" 0 = ∞ "
+                },
 		unit:" s",
 		step:500,
 		weight:0.001,
