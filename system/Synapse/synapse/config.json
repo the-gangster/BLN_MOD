@@ -47,6 +47,10 @@
 			1800000:{en:"30 minutes",de:"30 Minuten",fr:"30 minutes",pt:"30 minutos",ru:"30 минут",tr:"30 dakika"},
 			3600000:{en:"1 hour",de:"1 Stunde",fr:"1 heure",pt:"1 hora",ru:"1 час",tr:"1 saat"},
 			7200000:{en:"2 hours",de:"2 Stunden",fr:"2 heures",pt:"2 horas",ru:"2 часа",tr:"2 saat"},
+			10800000:{en:"3 hours",de:"3 Stunden",fr:"3 heures",pt:"3 horas",ru:"3 часа",tr:"3 saat"},
+			14400000:{en:"4 hours",de:"4 Stunden",fr:"4 heures",pt:"4 horas",ru:"4 часа",tr:"4 saat"},
+			18000000:{en:"5 hours",de:"5 Stunden",fr:"5 heures",pt:"5 horas",ru:"5 часа",tr:"5 saat"},
+			21600000:{en:"6 hours",de:"6 Stunden",fr:"6 heures",pt:"6 horas",ru:"6 часа",tr:"6 saat"},
 		}
 	}},
 	{ SOptionList:{
@@ -154,7 +158,7 @@
 		},
 		description:{
 			en:"Sets the speed for breathing or blinking steps",
-			de:"Geschwindigkeit der Spannungswechsel (nur Blinking/Breathing)",
+			de:"Geschwindigkeit der Spannungswechsel (nur Blinken/Pulsieren)",
 			fr:"Définir la vitesse de clignotement",
 			pt:"Define a velocidade para os efeitos pulsando/piscando",
 			ru:"Установка порога скорости для эффектов: ''Пульсация'', ''Мигание''. ",
@@ -177,6 +181,16 @@
 		],
 		action:"option steplength"
 	}},
+	{ 	STitleBar:{
+		title:{
+			en:"Backlight Notification Check",
+			de:"Backlight Notification Test",
+			fr:"FR TRANSLATION",
+			pt:"PT TRANSLATION",
+			ru:"RU TRANSLATION",
+			tr:"TR TRANSLATION"
+		}
+	}},
 	{ SLiveLabel:{
 		title:{
 			en:"Current settings",
@@ -188,8 +202,8 @@
 		},
 		description:{
 			en:"voltage steppings monitor",
-			fr:"Moniteur d'espacement pour voltage",
 			de:"Konfigurations-Monitor",
+			fr:"Moniteur d'espacement pour voltage",
 			pt:"Monitor das voltagens",
 			ru:"Монитор степпингов напряжения: ",
 			tr:"Voltaj kademeleri monitörü"
@@ -207,16 +221,115 @@
 			tr:"TEST ET"
 		},
 		action:"option toggleLEDs"
-	}},	
+        }},
+	{ SDescription:{
+		description:{
+			en:"Depending on BLN implementation it might be needed to power off the screen even for testing or not",
+			de:"Abhängig von der BLN Implementierung kann es auch zum Testen notwendig sein, den Bildschirm abzuschalten",
+			fr:"FR TRANSLATION",
+			pt:"PT TRANSLATION",
+			ru:"RU TRANSLATION",
+			tr:"TR TRANSLATION"
+		}
+	}},
+	]
+	},
+	{
+	name:{ 
+			en:"Touchkeys",
+			de:"Sensortasten",
+			fr:"FR TRANSLATION",
+			pt:"PT TRANSLATION",
+			ru:"RU TRANSLATION",
+			tr:"TR TRANSLATION"
+		},
+	elements:[
 	{ SPane:{
 		title:{
-			en:"Touchkey LEDs Settings",
+			en:"Touchkey LED Settings",
 			de:"Sensortasten LED Einstellungen",
 			fr:"Paramètres des touches LED",
 			pt:"Configurações dos LEDs de toque",
 			ru:"Параметры индикаторов сенсорных кнопок",
 			tr:"Dokunmatik LED Ayarları"
 		},
+		description:{ 
+			en:"Advanced settings for button backlight. \n(ROM support required)",
+			de:"Erweiterte Einstellungen zur Tasten Hintergrundbeleuchtung. \n(Muss vom ROM unterstützt werden)",
+			fr:"FR TRANSLATION",
+			pt:"PT TRANSLATION",
+			ru:"RU TRANSLATION",
+			tr:"TR TRANSLATION"
+		}
+	}},
+	{ SCheckBox:{
+		description:{
+			en:"Check to activate lights only on touch of sensor buttons \nUncheck to activate lights also on screentouch (and press of home button)",
+			de:"Aktivieren, um die Beleuchtung nur bei Berührung der Sensortasten einzuschalten \nDeaktivieren, um auch bei Bildschirmberührung (und Drücken der Home-Taste) die LEDs leuchten zu lassen",
+			fr:"FR TRANSLATION",
+			pt:"PT TRANSLATION",
+			ru:"RU TRANSLATION",
+			tr:"TR TRANSLATION"
+		},
+                label:"LEDs on keypress only",
+                default:1,
+                action:"generic /sys/class/sec/sec_touchkey/touchkey_led_on_keypress",
+        }},
+	{ SCheckBox:{
+		description:{
+			en:"Activate Fade-in for touchkeys",
+			de:"Fade-in für die Sensortasten aktivieren",
+			fr:"FR TRANSLATION",
+			pt:"PT TRANSLATION",
+			ru:"RU TRANSLATION",
+			tr:"TR TRANSLATION"
+		},
+                label:"Fade-In",
+                default:0,
+                action:"generic /sys/class/sec/sec_touchkey/touchkey_fadein",
+        }},
+	{ SCheckBox:{
+		description:{
+			en:"Activate Fade-out for touchkeys",
+			de:"Fade-out für die Sensortasten aktivieren",
+			fr:"FR TRANSLATION",
+			pt:"PT TRANSLATION",
+			ru:"RU TRANSLATION",
+			tr:"TR TRANSLATION"
+		},
+                label:"Fade-Out",
+                default:0,
+                action:"generic /sys/class/sec/sec_touchkey/touchkey_fadeout",
+        }},
+	]
+	},
+	{
+	name:{ 
+			en:"CM13-Touchkey",
+			de:"CM13-Sensortasten",
+			fr:"FR TRANSLATION",
+			pt:"PT TRANSLATION",
+			ru:"RU TRANSLATION",
+			tr:"TR TRANSLATION"
+		},
+	elements:[
+	{ SPane:{
+		title:{
+			en:"Touchkey LEDs Settings CM13",
+			de:"Sensortasten LED Einstellungen CM13",
+			fr:"Paramètres des touches LED CM13",
+			pt:"Configurações dos LEDs de toque CM13",
+			ru:"Параметры индикаторов сенсорных кнопок CM13",
+			tr:"Dokunmatik LED Ayarları CM13"
+		},
+		description:{ 
+			en:"Timeout settings for button backlights on CM13",
+			de:"Einstellungen für die Auszeit der Hintergrundbeleuchtung unter CM13",
+			fr:"Paramètres des touches LED",
+			pt:"Configurações dos LEDs de toque",
+			ru:"Параметры индикаторов сенсорных кнопок",
+			tr:"Dokunmatik LED Ayarları"
+		}
 	}},
 	{ SSeekBar:{
 		title:{
@@ -241,6 +354,36 @@
 		min:0,
 		max:5000,
 		action:"generic /sys/class/misc/notification/bl_timeout"
+	}},
+	]
+	},
+	{
+	name:{ 
+			en:"Information",
+			de:"Hinweise",
+			fr:"FR TRANSLATION",
+			pt:"PT TRANSLATION",
+			ru:"RU TRANSLATION",
+			tr:"TR TRANSLATION"
+		},
+	elements:[
+	{ SPane:{
+		title:{
+			en:"Good to know",
+			de:"Gut zu wissen",
+			fr:"FR TRANSLATION",
+			pt:"PT TRANSLATION",
+			ru:"RU TRANSLATION",
+			tr:"TR TRANSLATION"
+		},
+		description:{ 
+			en:"On LineageOS 14.1 the BLN code was rebased to work without wakelocks (BLNWW) under certain conditions.\nBLNWW combined with dynamic effects like pulsing or blinking will cause the LEDs to freeze at the voltage-level they have in the moment of falling asleep.\nIf a notification timeout is selected instead and combined with a dynamic effect the device will be kept awake until the timeout is reached.\nBe aware that these wakelocks will drain the battery.",
+			de:"In LineageOS 14.1 wurde der BLN Code überarbeitet um in bestimmten Konfigurationen ohne Wakelocks (BLNWW) arbeiten zu können.\nBei BLNWW werden dynamische -Effekte wie Blinken oder Pulsieren bei Erreichen des Tiefschlafs angehalten.\nWenn ein Timeout für die Benachrichtigungen eingestellt und mit einem nicht-statischen Effekt kombiniert wird, so wird jedoch der Tiefschlaf verhindert und die Effekte laufen weiter.\nDurch diese Wakelocks wird allerdings die Batterie mehr belastet.",
+			fr:"FR TRANSLATION",
+			pt:"PT TRANSLATION",
+			ru:"RU TRANSLATION",
+			tr:"TR TRANSLATION"
+		}
 	}},
 	]
 	},
