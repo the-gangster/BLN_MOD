@@ -186,7 +186,7 @@
 			en:"Backlight Notification Check",
 			de:"Backlight Notification Test",
 			fr:"FR TRANSLATION",
-			pt:"PT TRANSLATION",
+			pt:"Verificar o Backlight Notification",
 			ru:"RU TRANSLATION",
 			tr:"TR TRANSLATION"
 		}
@@ -204,7 +204,7 @@
 			en:"voltage steppings monitor",
 			de:"Konfigurations-Monitor",
 			fr:"Moniteur d'espacement pour voltage",
-			pt:"Monitor das voltagens",
+			pt:"Monitor de voltagens",
 			ru:"Монитор степпингов напряжения: ",
 			tr:"Voltaj kademeleri monitörü"
 		},
@@ -227,7 +227,7 @@
 			en:"Depending on BLN implementation it might be needed to power off the screen even for testing or not",
 			de:"Abhängig von der BLN Implementierung kann es auch zum Testen notwendig sein, den Bildschirm abzuschalten",
 			fr:"FR TRANSLATION",
-			pt:"PT TRANSLATION",
+			pt:"Dependendo da implementação do BLN, pode ser necessário desligar a tela para testar",
 			ru:"RU TRANSLATION",
 			tr:"TR TRANSLATION"
 		}
@@ -239,7 +239,7 @@
 			en:"Touchkeys",
 			de:"Sensortasten",
 			fr:"FR TRANSLATION",
-			pt:"PT TRANSLATION",
+			pt:"Botões Touch",
 			ru:"RU TRANSLATION",
 			tr:"TR TRANSLATION"
 		},
@@ -249,7 +249,7 @@
 			en:"Touchkey LED Settings",
 			de:"Sensortasten LED Einstellungen",
 			fr:"Paramètres des touches LED",
-			pt:"Configurações dos LEDs de toque",
+			pt:"Configurações do LED dos botões touch",
 			ru:"Параметры индикаторов сенсорных кнопок",
 			tr:"Dokunmatik LED Ayarları"
 		},
@@ -257,7 +257,7 @@
 			en:"Advanced settings for button backlight. \n(ROM support required)",
 			de:"Erweiterte Einstellungen zur Tasten Hintergrundbeleuchtung. \n(Muss vom ROM unterstützt werden)",
 			fr:"FR TRANSLATION",
-			pt:"PT TRANSLATION",
+			pt:"Configurações avançadas para a luz de fundo dos botões. \n(Deve ser suportado pela ROM)",
 			ru:"RU TRANSLATION",
 			tr:"TR TRANSLATION"
 		}
@@ -267,7 +267,7 @@
 			en:"Check to activate lights only on touch of sensor buttons \nUncheck to activate lights also on screentouch (and press of home button)",
 			de:"Aktivieren, um die Beleuchtung nur bei Berührung der Sensortasten einzuschalten \nDeaktivieren, um auch bei Bildschirmberührung (und Drücken der Home-Taste) die LEDs leuchten zu lassen",
 			fr:"FR TRANSLATION",
-			pt:"PT TRANSLATION",
+			pt:"Selecione para ativar as luzes somente quando apertar os botões touch \nDesmarque para também ativar as luzes quando tocar a tela (e quando apertar o botão home)",
 			ru:"RU TRANSLATION",
 			tr:"TR TRANSLATION"
 		},
@@ -280,7 +280,7 @@
 			en:"Activate Fade-in for touchkeys",
 			de:"Fade-in für die Sensortasten aktivieren",
 			fr:"FR TRANSLATION",
-			pt:"PT TRANSLATION",
+			pt:"Ativar Fade-in para os botões touch",
 			ru:"RU TRANSLATION",
 			tr:"TR TRANSLATION"
 		},
@@ -293,7 +293,7 @@
 			en:"Activate Fade-out for touchkeys",
 			de:"Fade-out für die Sensortasten aktivieren",
 			fr:"FR TRANSLATION",
-			pt:"PT TRANSLATION",
+			pt:"Ativar Fade-out para os botões touch",
 			ru:"RU TRANSLATION",
 			tr:"TR TRANSLATION"
 		},
@@ -308,7 +308,7 @@
 			en:"CM13-Touchkey",
 			de:"CM13-Sensortasten",
 			fr:"FR TRANSLATION",
-			pt:"PT TRANSLATION",
+			pt:"CM13-BotõesTouch",
 			ru:"RU TRANSLATION",
 			tr:"TR TRANSLATION"
 		},
@@ -318,7 +318,7 @@
 			en:"Touchkey LEDs Settings CM13",
 			de:"Sensortasten LED Einstellungen CM13",
 			fr:"Paramètres des touches LED CM13",
-			pt:"Configurações dos LEDs de toque CM13",
+			pt:"Configurações do LED dos botões touch CM13",
 			ru:"Параметры индикаторов сенсорных кнопок CM13",
 			tr:"Dokunmatik LED Ayarları CM13"
 		},
@@ -326,7 +326,7 @@
 			en:"Timeout settings for button backlights on CM13",
 			de:"Einstellungen für die Auszeit der Hintergrundbeleuchtung unter CM13",
 			fr:"Paramètres des touches LED",
-			pt:"Configurações dos LEDs de toque",
+			pt:"Configurações de tempo limite da luz de fundo dos botões no CM13",
 			ru:"Параметры индикаторов сенсорных кнопок",
 			tr:"Dokunmatik LED Ayarları"
 		}
@@ -336,7 +336,7 @@
 			en:"Touchkey LEDs Timeout",
 			de:"Sensortasten LED Auszeit",
 			fr:"Délai des touches LED",
-			pt:"Tempo limite dos LEDs de toque",
+			pt:"Tempo limite do LED dos botões touch",
 			ru:"Тайм-аут индикаторов сенсорных кнопок",
 			tr:"Dokunmatik LED'lerin Zaman Aşımı"
 		},
@@ -362,7 +362,7 @@
 			en:"Information",
 			de:"Hinweise",
 			fr:"FR TRANSLATION",
-			pt:"PT TRANSLATION",
+			pt:"Informações",
 			ru:"RU TRANSLATION",
 			tr:"TR TRANSLATION"
 		},
@@ -372,7 +372,7 @@
 			en:"Good to know",
 			de:"Gut zu wissen",
 			fr:"FR TRANSLATION",
-			pt:"PT TRANSLATION",
+			pt:"Bom saber",
 			ru:"RU TRANSLATION",
 			tr:"TR TRANSLATION"
 		},
@@ -380,7 +380,7 @@
 			en:"On LineageOS 14.1 the BLN code was rebased to work without wakelocks (BLNWW) under certain conditions.\nBut BLNWW combined with dynamic effects like breathing or blinking would cause the LEDs to freeze at the voltage-level they have in the moment of falling asleep.\nTherefore, only if a dynamic effect is selected, a wakelock will be set for it to work as expected.\nBe aware that these wakelocks will increase the drain of the battery.\n\nNote: There is a flag that can be used to override this behavior which wasn't implemented into this version of BLN_MOD as it could allow a notification to freeze at an LED-off-voltage-level (and to to keep up compatibility)",
 			de:"In LineageOS 14.1 wurde der BLN Code überarbeitet um in bestimmten Konfigurationen ohne Wakelocks (BLNWW) arbeiten zu können.\nBei BLNWW würden aber dynamische Effekte wie Blinken oder Pulsieren mit Erreichen des Tiefschlafs bei der dann gerade aktuellen Spannungsstufe verharren.\nDeshalb wurde für nicht-statische Effekt wieder ein Wakelock eingebaut. So wird der Tiefschlaf verhindert und die Effekte laufen wie erwartet.\nDurch derlei Wakelocks wird allerdings auch die Batterie mehr belastet.\n\nAnmerkung: Es gibt ein Methode, um dieses Verhalten zu übersteuern, welche aber nicht in diese Version von BLN_MOD implementiert wurde, da es zulassen könnte, dass die LEDs bei der Benachrichtigung im Aus-Zustand verbleiben (und um kompatibel zu bleiben)",
 			fr:"FR TRANSLATION",
-			pt:"PT TRANSLATION",
+			pt:"No LineageOS 14.1 o código do BLN foi revisado para funcionar sem wakelocks (BLNWW) em certas condições.\nPorem se o BLNWW for combinado com um efeito dinâmico, como pulsando ou piscando, fará com que a voltagem dos LEDs congelem no momento em que o aparelho entrar em modo de suspensão.\nPortanto, se um efeito dinâmico for selecionado, um wakelock será definido para que ele funcione conforme o esperado.\nEsteja ciente de que esses wakelocks irão aumentar o consumo da bateria.\n\nNota: Existe um método que pode ser usado para sobrescrever esse comportamento, porem ele não foi implementado nesta versão do BLN_MOD já que poderia congelar os LEDs no estado desligado (e para manter a compatibilidade).",
 			ru:"RU TRANSLATION",
 			tr:"TR TRANSLATION"
 		}
